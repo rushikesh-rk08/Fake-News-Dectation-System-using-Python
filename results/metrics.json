@@ -15,8 +15,9 @@
     "train": 4846,
     "test": 1212
   },
+  "saved_model": "Passive-Aggressive (tuned)",
   "models": {
-    "Passive-Aggressive": {
+    "Passive-Aggressive (no cleaning)": {
       "test": {
         "accuracy": 0.9306930693069307,
         "precision": {
@@ -48,27 +49,71 @@
           ]
         }
       },
-      "fit_seconds": 3.36,
+      "fit_seconds": 3.42,
       "cv_accuracy": {
         "mean": 0.9292191971742575,
         "std": 0.005415470785202935,
+        "folds": 5
+      },
+      "mcnemar_vs_baseline": {
+        "a_only_correct": 15,
+        "b_only_correct": 27,
+        "p_value": 0.08842954698775429
+      }
+    },
+    "Passive-Aggressive": {
+      "test": {
+        "accuracy": 0.9207920792079208,
+        "precision": {
+          "FAKE": 0.9085173501577287,
+          "REAL": 0.9342560553633218
+        },
+        "recall": {
+          "FAKE": 0.9381107491856677,
+          "REAL": 0.903010033444816
+        },
+        "f1": {
+          "FAKE": 0.9230769230769231,
+          "REAL": 0.9183673469387755
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              576,
+              38
+            ],
+            [
+              58,
+              540
+            ]
+          ]
+        }
+      },
+      "fit_seconds": 4.1,
+      "cv_accuracy": {
+        "mean": 0.9186952219846158,
+        "std": 0.006987790898838229,
         "folds": 5
       }
     },
     "Logistic regression": {
       "test": {
-        "accuracy": 0.9224422442244224,
+        "accuracy": 0.9133663366336634,
         "precision": {
-          "FAKE": 0.90625,
-          "REAL": 0.9405594405594405
+          "FAKE": 0.895800933125972,
+          "REAL": 0.9332161687170475
         },
         "recall": {
-          "FAKE": 0.9446254071661238,
-          "REAL": 0.8996655518394648
+          "FAKE": 0.9381107491856677,
+          "REAL": 0.8879598662207357
         },
         "f1": {
-          "FAKE": 0.9250398724082934,
-          "REAL": 0.9196581196581196
+          "FAKE": 0.9164677804295943,
+          "REAL": 0.910025706940874
         },
         "confusion_matrix": {
           "labels": [
@@ -77,37 +122,42 @@
           ],
           "rows_actual_cols_predicted": [
             [
-              580,
-              34
+              576,
+              38
             ],
             [
-              60,
-              538
+              67,
+              531
             ]
           ]
         }
       },
-      "fit_seconds": 4.73,
+      "fit_seconds": 5.04,
       "cv_accuracy": {
-        "mean": 0.9259178875022609,
-        "std": 0.008087338926381003,
+        "mean": 0.9182817869415807,
+        "std": 0.007322601056351145,
         "folds": 5
+      },
+      "mcnemar_vs_baseline": {
+        "a_only_correct": 20,
+        "b_only_correct": 11,
+        "p_value": 0.14961278438568115
       }
     },
     "Multinomial naive Bayes": {
       "test": {
-        "accuracy": 0.8935643564356436,
+        "accuracy": 0.8877887788778878,
         "precision": {
-          "FAKE": 0.9217391304347826,
-          "REAL": 0.8681318681318682
+          "FAKE": 0.9134948096885813,
+          "REAL": 0.8643533123028391
         },
         "recall": {
-          "FAKE": 0.8631921824104235,
-          "REAL": 0.9247491638795987
+          "FAKE": 0.8599348534201955,
+          "REAL": 0.9163879598662207
         },
         "f1": {
-          "FAKE": 0.8915054667788057,
-          "REAL": 0.8955465587044534
+          "FAKE": 0.8859060402684564,
+          "REAL": 0.8896103896103896
         },
         "confusion_matrix": {
           "labels": [
@@ -116,37 +166,42 @@
           ],
           "rows_actual_cols_predicted": [
             [
-              530,
-              84
+              528,
+              86
             ],
             [
-              45,
-              553
+              50,
+              548
             ]
           ]
         }
       },
-      "fit_seconds": 3.42,
+      "fit_seconds": 3.88,
       "cv_accuracy": {
-        "mean": 0.8926949879246326,
-        "std": 0.005342672116852311,
+        "mean": 0.8846475801389465,
+        "std": 0.004621985295097168,
         "folds": 5
+      },
+      "mcnemar_vs_baseline": {
+        "a_only_correct": 80,
+        "b_only_correct": 40,
+        "p_value": 0.00033040001839131815
       }
     },
     "Neural network (MLP)": {
       "test": {
-        "accuracy": 0.9331683168316832,
+        "accuracy": 0.9249174917491749,
         "precision": {
-          "FAKE": 0.9347471451876019,
-          "REAL": 0.9315525876460768
+          "FAKE": 0.9336650082918739,
+          "REAL": 0.916256157635468
         },
         "recall": {
-          "FAKE": 0.9332247557003257,
+          "FAKE": 0.9169381107491856,
           "REAL": 0.9331103678929766
         },
         "f1": {
-          "FAKE": 0.9339853300733496,
-          "REAL": 0.9323308270676691
+          "FAKE": 0.9252259654889071,
+          "REAL": 0.9246064623032312
         },
         "confusion_matrix": {
           "labels": [
@@ -155,8 +210,8 @@
           ],
           "rows_actual_cols_predicted": [
             [
-              573,
-              41
+              563,
+              51
             ],
             [
               40,
@@ -165,48 +220,317 @@
           ]
         }
       },
-      "fit_seconds": 42.09,
+      "fit_seconds": 37.64,
       "cv_accuracy": {
-        "mean": 0.9182839147596098,
-        "std": 0.007092352251805763,
+        "mean": 0.910442266977328,
+        "std": 0.01050619368732924,
         "folds": 5
+      },
+      "mcnemar_vs_baseline": {
+        "a_only_correct": 29,
+        "b_only_correct": 34,
+        "p_value": 0.6146550157654618
+      }
+    },
+    "Passive-Aggressive (tuned)": {
+      "test": {
+        "accuracy": 0.9249174917491749,
+        "precision": {
+          "FAKE": 0.9131121642969984,
+          "REAL": 0.9378238341968912
+        },
+        "recall": {
+          "FAKE": 0.9413680781758957,
+          "REAL": 0.9080267558528428
+        },
+        "f1": {
+          "FAKE": 0.9270248596631917,
+          "REAL": 0.9226847918436704
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              578,
+              36
+            ],
+            [
+              55,
+              543
+            ]
+          ]
+        }
+      },
+      "fit_seconds": 4.28,
+      "cv_accuracy": {
+        "mean": 0.9259174619386551,
+        "std": 0.006316880644255655,
+        "folds": 5
+      },
+      "params": {
+        "max_df": 0.5,
+        "ngram_range": [
+          1,
+          1
+        ],
+        "sublinear_tf": true,
+        "C": 0.1
+      },
+      "mcnemar_vs_baseline": {
+        "a_only_correct": 25,
+        "b_only_correct": 30,
+        "p_value": 0.5900533317766354
       }
     }
   },
-  "top_terms_baseline": {
+  "external": {
+    "dataset": "ISOT Fake News Dataset",
+    "data": {
+      "raw_rows": 44898,
+      "empty_text_removed": 631,
+      "duplicate_text_removed": 5628,
+      "rows_used": 38639,
+      "label_counts": {
+        "REAL": 21190,
+        "FAKE": 17449
+      }
+    },
+    "models": {
+      "Passive-Aggressive (no cleaning)": {
+        "accuracy": 0.6390175729185538,
+        "precision": {
+          "FAKE": 0.5904978545210153,
+          "REAL": 0.6876554726368159
+        },
+        "recall": {
+          "FAKE": 0.6545933864404837,
+          "REAL": 0.6261915998112317
+        },
+        "f1": {
+          "FAKE": 0.6208958469232442,
+          "REAL": 0.6554858469594428
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              11422,
+              6027
+            ],
+            [
+              7921,
+              13269
+            ]
+          ]
+        }
+      },
+      "Passive-Aggressive": {
+        "accuracy": 0.6331685602629468,
+        "precision": {
+          "FAKE": 0.5841685941917245,
+          "REAL": 0.682860717264387
+        },
+        "recall": {
+          "FAKE": 0.6513267235944753,
+          "REAL": 0.6182161396885323
+        },
+        "f1": {
+          "FAKE": 0.6159223932365055,
+          "REAL": 0.6489324812998465
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              11365,
+              6084
+            ],
+            [
+              8090,
+              13100
+            ]
+          ]
+        }
+      },
+      "Logistic regression": {
+        "accuracy": 0.6375164988741945,
+        "precision": {
+          "FAKE": 0.5839797063271379,
+          "REAL": 0.6980154355016538
+        },
+        "recall": {
+          "FAKE": 0.6860565075362485,
+          "REAL": 0.5975460122699386
+        },
+        "f1": {
+          "FAKE": 0.6309159903025192,
+          "REAL": 0.6438850750063565
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              11971,
+              5478
+            ],
+            [
+              8528,
+              12662
+            ]
+          ]
+        }
+      },
+      "Multinomial naive Bayes": {
+        "accuracy": 0.535831672662336,
+        "precision": {
+          "FAKE": 0.48453214513049014,
+          "REAL": 0.5709799816825853
+        },
+        "recall": {
+          "FAKE": 0.43624276462834544,
+          "REAL": 0.6178386031146768
+        },
+        "f1": {
+          "FAKE": 0.45912120389637806,
+          "REAL": 0.5934857997688071
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              7612,
+              9837
+            ],
+            [
+              8098,
+              13092
+            ]
+          ]
+        }
+      },
+      "Neural network (MLP)": {
+        "accuracy": 0.61054892724967,
+        "precision": {
+          "FAKE": 0.5632607893766138,
+          "REAL": 0.6561896043128878
+        },
+        "recall": {
+          "FAKE": 0.612585248438306,
+          "REAL": 0.6088721094856064
+        },
+        "f1": {
+          "FAKE": 0.5868884862460879,
+          "REAL": 0.6316459414471751
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              10689,
+              6760
+            ],
+            [
+              8288,
+              12902
+            ]
+          ]
+        }
+      },
+      "Passive-Aggressive (tuned)": {
+        "accuracy": 0.603794094050053,
+        "precision": {
+          "FAKE": 0.5512353955181,
+          "REAL": 0.6656153196282737
+        },
+        "recall": {
+          "FAKE": 0.6597512751447074,
+          "REAL": 0.5577159037281737
+        },
+        "f1": {
+          "FAKE": 0.6006313098374768,
+          "REAL": 0.6069071767877776
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              11512,
+              5937
+            ],
+            [
+              9372,
+              11818
+            ]
+          ]
+        }
+      }
+    },
+    "reverse": {
+      "no cleaning": {
+        "isot_test_accuracy": 0.9906832298136646,
+        "main_dataset_accuracy": 0.5643776824034334
+      },
+      "cleaned": {
+        "isot_test_accuracy": 0.9714026915113871,
+        "main_dataset_accuracy": 0.5554638494552657
+      }
+    }
+  },
+  "top_terms_saved_model": {
     "FAKE": [
-      "2016",
-      "october",
       "hillary",
-      "article",
-      "source",
-      "share",
-      "november",
       "election",
-      "establishment",
-      "print",
-      "advertisement",
+      "posted",
       "podesta",
       "email",
+      "voting",
       "mosul",
-      "wikileaks"
+      "watch",
+      "pm",
+      "mainstream",
+      "stated",
+      "snip",
+      "wikileaks",
+      "photo",
+      "russia"
     ],
     "REAL": [
-      "said",
-      "gop",
-      "says",
-      "friday",
-      "convention",
-      "fox",
-      "rush",
-      "conservative",
       "state",
-      "marriage",
-      "tuesday",
+      "fox",
+      "conservative",
+      "told",
+      "associated",
+      "rush",
+      "gop",
+      "convention",
+      "campaign",
+      "cnn",
       "islamic",
-      "saturday",
-      "jobs",
-      "campaign"
+      "cruz",
+      "questions",
+      "feuds",
+      "sen"
     ]
   }
 }

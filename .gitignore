@@ -1,6 +1,7 @@
-data/*.csv
+data/**/*.csv
 models/
 __pycache__/
 *.pyc
 .venv/
+.pytest_cache/
 .ipynb_checkpoints/
