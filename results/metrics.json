@@ -1,0 +1,212 @@
+{
+  "data": {
+    "raw_rows": 6335,
+    "empty_text_removed": 36,
+    "duplicate_text_removed": 241,
+    "rows_used": 6058,
+    "label_counts": {
+      "FAKE": 3069,
+      "REAL": 2989
+    }
+  },
+  "split": {
+    "test_size": 0.2,
+    "seed": 7,
+    "train": 4846,
+    "test": 1212
+  },
+  "models": {
+    "Passive-Aggressive": {
+      "test": {
+        "accuracy": 0.9306930693069307,
+        "precision": {
+          "FAKE": 0.9246794871794872,
+          "REAL": 0.9370748299319728
+        },
+        "recall": {
+          "FAKE": 0.9397394136807817,
+          "REAL": 0.9214046822742475
+        },
+        "f1": {
+          "FAKE": 0.9321486268174475,
+          "REAL": 0.9291736930860034
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              577,
+              37
+            ],
+            [
+              47,
+              551
+            ]
+          ]
+        }
+      },
+      "fit_seconds": 3.36,
+      "cv_accuracy": {
+        "mean": 0.9292191971742575,
+        "std": 0.005415470785202935,
+        "folds": 5
+      }
+    },
+    "Logistic regression": {
+      "test": {
+        "accuracy": 0.9224422442244224,
+        "precision": {
+          "FAKE": 0.90625,
+          "REAL": 0.9405594405594405
+        },
+        "recall": {
+          "FAKE": 0.9446254071661238,
+          "REAL": 0.8996655518394648
+        },
+        "f1": {
+          "FAKE": 0.9250398724082934,
+          "REAL": 0.9196581196581196
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              580,
+              34
+            ],
+            [
+              60,
+              538
+            ]
+          ]
+        }
+      },
+      "fit_seconds": 4.73,
+      "cv_accuracy": {
+        "mean": 0.9259178875022609,
+        "std": 0.008087338926381003,
+        "folds": 5
+      }
+    },
+    "Multinomial naive Bayes": {
+      "test": {
+        "accuracy": 0.8935643564356436,
+        "precision": {
+          "FAKE": 0.9217391304347826,
+          "REAL": 0.8681318681318682
+        },
+        "recall": {
+          "FAKE": 0.8631921824104235,
+          "REAL": 0.9247491638795987
+        },
+        "f1": {
+          "FAKE": 0.8915054667788057,
+          "REAL": 0.8955465587044534
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              530,
+              84
+            ],
+            [
+              45,
+              553
+            ]
+          ]
+        }
+      },
+      "fit_seconds": 3.42,
+      "cv_accuracy": {
+        "mean": 0.8926949879246326,
+        "std": 0.005342672116852311,
+        "folds": 5
+      }
+    },
+    "Neural network (MLP)": {
+      "test": {
+        "accuracy": 0.9331683168316832,
+        "precision": {
+          "FAKE": 0.9347471451876019,
+          "REAL": 0.9315525876460768
+        },
+        "recall": {
+          "FAKE": 0.9332247557003257,
+          "REAL": 0.9331103678929766
+        },
+        "f1": {
+          "FAKE": 0.9339853300733496,
+          "REAL": 0.9323308270676691
+        },
+        "confusion_matrix": {
+          "labels": [
+            "FAKE",
+            "REAL"
+          ],
+          "rows_actual_cols_predicted": [
+            [
+              573,
+              41
+            ],
+            [
+              40,
+              558
+            ]
+          ]
+        }
+      },
+      "fit_seconds": 42.09,
+      "cv_accuracy": {
+        "mean": 0.9182839147596098,
+        "std": 0.007092352251805763,
+        "folds": 5
+      }
+    }
+  },
+  "top_terms_baseline": {
+    "FAKE": [
+      "2016",
+      "october",
+      "hillary",
+      "article",
+      "source",
+      "share",
+      "november",
+      "election",
+      "establishment",
+      "print",
+      "advertisement",
+      "podesta",
+      "email",
+      "mosul",
+      "wikileaks"
+    ],
+    "REAL": [
+      "said",
+      "gop",
+      "says",
+      "friday",
+      "convention",
+      "fox",
+      "rush",
+      "conservative",
+      "state",
+      "marriage",
+      "tuesday",
+      "islamic",
+      "saturday",
+      "jobs",
+      "campaign"
+    ]
+  }
+}
